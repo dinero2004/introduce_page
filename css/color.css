@@ -1,0 +1,10 @@
+/* variables.css */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #454545;
+    --accent-color: #ebe0ca;
+    --background-color: #FFFBF3;
+    --text-color: #1d1d1d;
+    --secondary-text-color: #ffff;
+    --link-color: #033838;
+}

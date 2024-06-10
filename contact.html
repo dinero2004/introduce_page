@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Lazar Minkov</title>
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/typography.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            &#9776; 
+        </div>
+        <nav id="nav">
+            <a href="index.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="interests.html">Interests</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <section id="contact">
+                <h3>Explore my social network:</h3>
+                <form id="socialNetwork">
+                    <ul>
+                        <li> <a href="https://www.instagram.com/lazar.minkov/feed/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/">LinkedIn</a></li>
+                        <li><a href="https://www.xing.com/profile/Lazar_Minkov/web_profiles?expandNeffi=true">Xing</a></li>
+                        <li><a href="https://github.com/dinero2004">GitHub</a></li>
+                        <li><a href="https://x.com/lazar_minkov1">X</a></li>
+                    </ul>
+                </form>
+            </section>
+        </section>
+        <section id="contact">
+            <h3>Write me a massage:</h3>
+            <form id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lazar Minkov. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Thank you for your message!');
+            this.reset();
+        });
+    </script>
+</body>
+<script src="code/code.js"></script>
+</html>

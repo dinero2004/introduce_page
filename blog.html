@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Lazar Minkov</title>
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/typography.css">
+</head>
+
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <nav id="nav">
+            <a href="index.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="interests.html">Interests</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Blog</h2>
+            <p>On the blog page, you'll find a collection of posts sharing stories about my life, like traveling, events regular day and funny moments.</p>
+        </section>
+        <section id="blog">
+            <div class="blog-post">
+                <h3>Getting started with cycling🚴.</h3>
+                <p>Summary of the blog post goes here.</p>
+                <button onclick="showBlogDetails('Blog Post Title 1')">Read More</button>
+            </div>
+            <div class="blog-post">
+                <h3>Living in Switzerland🇨🇭</h3>
+                <p>Summary of the blog post goes here.</p>
+                <button onclick="showBlogDetails('Blog Post Title 2')">Read More</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lazar Minkov. All rights reserved.</p>
+    </footer>
+    <script>
+        function showBlogDetails(title) {
+            alert('Showing details for: ' + title);
+        }
+    </script>
+</body>
+<script src="code/code.js"></script>
+</html>

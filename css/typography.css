@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, p {
+
+    font-family: 'IBM Plex Mono', serif;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+button, input[type="submit"] {
+    font-family: 'IBM Plex Mono', serif;
+    font-size: 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: darkorange;
+    transform: translateY(-2px);
+}
+
+button:active, input[type="submit"]:active {
+    background-color: #e68a00;
+    transform: translateY(0);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav > a {
+    font-size: 1.4rem;
+}
+
+a:hover {
+    color: rgb(225, 182, 130);
+}
+
+li {
+    font-size: 1.4rem;
+}

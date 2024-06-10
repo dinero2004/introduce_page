@@ -1,0 +1,270 @@
+/* Small Reset */
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 23, 23);
+    padding: 16px;
+}
+
+nav a {
+    color: #fff;
+    padding: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* nav a:hover {
+    background-color: hsla(0, 0%, 12%, 0.106);
+} */
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    text-align: right;
+    padding: 16px;
+    font-size: 4rem;
+    z-index: 1100; /* Ensure hamburger is above navigation */
+}
+
+/* Body Classes */
+body.nav-active {
+    overflow: hidden; /* Prevent scrolling when navigation is active */
+}
+
+/* Full Navigation for Desktop */
+@media (min-width: 769px) {
+    nav {
+        display: flex; /* Ensure full navigation is always visible on larger screens */
+        flex-direction: row; /* Make sure the nav items are in one row */
+        width: 100%; /* Ensure nav takes full width */
+        height: auto; /* Adjust height for desktop */
+        position: static; /* Normal flow for desktop */
+        background: none; /* Remove background for desktop */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+}
+
+/* Hamburger Navigation for Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+        color: black;
+        position: fixed;
+        top: 16px;
+        right: 16px;
+    }
+
+    nav {
+        display: none; /* Hide full navigation on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        backdrop-filter: blur(10px);
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        transition: top 0.3s ease;
+    }
+
+    nav.active {
+        display: flex; /* Show full navigation when hamburger menu is active */
+        top: 0; /* Bring navigation into view */
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    nav {
+        animation: slideIn 0.4s ease; /* Apply the animation */
+    }
+}
+
+/* Main Section Styling */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 2em;
+    margin: auto;
+}
+
+.main-img {
+    filter: grayscale(80%);
+}
+
+.main-section {
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px){
+
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section {
+        padding: 16px;
+
+    }
+}
+
+.about-section {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 100%;
+    top: 0;
+}
+
+.portfolio-item,
+.blog-post {
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover,
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.gallery-item {
+    background: var(--secondary-color);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    clip-path: inset(10 0 10 0);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item .description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.gallery-item:hover .description {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+footer p {
+    color: white;
+}
+
+#socialNetwork ul {
+    margin: 15px;
+}
